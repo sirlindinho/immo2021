@@ -11,4 +11,6 @@ public class MainPage {
     public SelenideElement searchButton = $("[data-test=menu-main-icon-search]");
 }
 
-public class ABC {}
+public class ABC {
+    public
+}
