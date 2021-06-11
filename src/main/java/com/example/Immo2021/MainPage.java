@@ -10,7 +10,3 @@ public class MainPage {
     public SelenideElement toolsMenu = $x("//div[contains(@class, 'menu-main__item') and text() = 'Tools']");
     public SelenideElement searchButton = $("[data-test=menu-main-icon-search]");
 }
-
-public class ABC {
-    public
-}
