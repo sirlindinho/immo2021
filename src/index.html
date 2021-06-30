@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+    <head>
+        <meta charset="utf-8" />
+        <title>ImmoFinder Karlsruhe</title>
+        <link rel="shortcut icon" href="Haus.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+        <!-- Klasse App: Steuert die gesamte Anwendung -->
+        <script src="App.js"></script>
+        <link rel="stylesheet" href="app.css" />
+        <!--firebase-->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
+
+        <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
+        <script src="database.js"></script>
+
+        <!-- TODO: Klasse App ausprogrammieren -->
+        <!-- TODO: Klasse PageNotFound anlegen und ausprogrammieren -->
+        <!-- TODO: Klasse PageOverview zu Ende programmieren -->
+        <!-- TODO: Klasse PageDetail zu Ende programmieren -->
+        <script src="Main Page/Main PAge.js"></script>
+        <script src="Page%20Detail/script.js"></script>
+        <script src="page-not-found/page-not-found.js"></script>
+        <script src="Kontakt%20Page/Kontakt%20Page.js"></script>
+
+
+
+        <!-- Fontello Icon Font (generiert auf fontello.com) -->
+        <link rel="stylesheet" href="fontello/css/fontello.css" />
+
+        <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
+        <link rel="stylesheet" href="elements/button.css" />
+        <link rel="stylesheet" href="elements/tab-buttons.css" />
+        <link rel="stylesheet" href="elements/form.css" />
+
+        <script>
+            // Warten, bis die Seite komplett geladen wurde
+            window.addEventListener("load", () => {
+              let pages = [{
+                url: "^/$",     // ^ = Nichts am Anfang, $ Nichts am Ende
+                klass: PageOverview,
+              }, {
+                url: "^/Detail/(.*)$",   // .= Beliebiges Zeichen, * = Beliebig Oft
+                klass: Detail,       // () SubString rausschneiden
+              }, {
+                url: "^/Kontakt Page/$",
+                klass: KontaktPage,
+              }, {
+                url: ".*",
+                klass: PageNotFound,
+              }
+            ];
+                let app = new App("ImmoFinder", pages);
+                app.run();
+            });
+        </script>
+        <style id="page-css"></style> <!-- dynamisch nachgeladene Stylesheets-->
+    </head>
+    <body>
+        <!-- Kopfbereich der App -->
+        <header>
+            <nav>
+                <!-- Logo, Zurück-Button und Titel der Seite -->
+                <img class="logo" src="Haus.png" alt="Logo" />
+
+                <ul class="menu-left">
+                    <li class="go-back">
+                        <a href="#">
+                            <i class="icon-left-open"></i>
+                            <span class="page-name">ImmoFinder - Immobilien in der Region Karlsruhe</span>
+                        </a>
+                    </li>
+                    <li class="dont-go-back hidden">
+                        <span class="page-name">ImmoFinder - Immobilien in der Region Karlsruhe</span>
+                    </li>
+                    <li class="toggle-menu small-screen-only">
+                        <a href="#">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+              <div class="button-group">
+                  <button type="button" class="button" id="ImmoButton">Immobilie hinzufügen</button>
+              </div>
+            <div class="content">
+            </div>
+
+        </header>
+
+        <!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
+        <main id="app-main-area">
+            Dies ist die offizielle Immobilienseite für Karlsruher Immobilien. <br>
+            Hier können Sie Angebote ansehen oder ein eigenes Angebot hinzufügen.<br>
+
+            Klicken Sie auf Suchen, um Immobilien mit Ihren Kriterien zu suchen. <br>
+            Oder klicken Sie auf Immobilie hinzufügen, um Ihre eigene Immobilie hochzustellen.
+
+
+        </main>
+
+
+    </body>
+</html>

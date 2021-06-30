@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Kopfbereich -->
+<header>
+    <link rel="stylesheet" href="Kontakt%20Page.css">
+    <h1 class = "container">Kontakt</h1>
+</header>
 
-</body>
-</html>
+<!-- Hauptbereich -->
+<main>
+    <div class ="container">
+    <form id="immoformular">
+        <label for="firstname">
+            Ihr Name:
+        </label>
+        <div class="side-by-side">
+            <input name="firstname" type="text" id="firstname" placeholder="Vorname" />
+            <input name="lastname" type="text"  id="lastname" placeholder="Nachname" />
+        </div>
+        <label for="email">
+            E-Mail:
+        </label>
+        <input name="email" type="email"  id="email" placeholder="E-Mail" />
+
+        <label for="telefon">
+            Telefonnummer:
+        </label>
+        <input name="tel" type="text" id="tel" placeholder="Telefon"/>
+        <label for="Mietpreis">
+            Name Ihrer Immobilie:
+        </label>
+        <input name="immoname" type="text" id="immoname" placeholder="Name Ihrer Immobilie"/>
+        <label for="message">
+            <strong>Beschreibung ihrer Immobilie:</strong>
+            <p>
+                Geben sie hier Details zu Ihrer Immobilie an. (Aufteilung, Lage usw.)
+            </p>
+        </label>
+        <textarea name="beschreibung" cols="35" rows="4" id="beschreibung" placeholder="Angaben zu Ihrer Immobilie"></textarea>
+
+        <div class="alert">
+            Ihre Anfrage wurde erfolgreich zugestellt!
+        </div>
+        <button type="submit" class="button" name="fertig">Anfrage absenden</button>
+    </form>
+    </div>
+</main>

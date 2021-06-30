@@ -1,0 +1,30 @@
+/**
+ * Stylesheet zur schöneren Gestaltung einfacher Buttons
+ */
+
+button {
+    font-size: 60%;
+
+    border: none;
+    height: 60px;
+    text-align: center;
+    border-radius: 8px;
+
+
+    color: white;
+    background-color: rgb(17, 68, 121);
+    transition: background-color 0.25s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(28, 88, 150);
+}
+input{
+
+  height: 30px;
+  width: inherit;
+}
+span{
+  color: black;
+}
