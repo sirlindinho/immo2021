@@ -15,6 +15,7 @@ class app {
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
 
+
     function Writevariabledata() {
         var name = document.getElementById("name");
         var email = document.getElementById("email");
@@ -29,6 +30,9 @@ class app {
 
         docRef.push().set(messagetext);
         window.alert("Inserted Successfully..");
+    }
+    function mail(){
+        window.open('mailto:sirlindinh@googlemail.com?subject=subject&body=body');
     }
 }}
 
