@@ -16,7 +16,13 @@ class app {
         firebase.analytics();
 
 
-    function Writevariabledata() {
+        let formElement = pageDom.querySelector("form");
+        formElement.addEventListener("onclick", this.Writedata);
+        let formElement1 = pageDom.querySelector("form");
+        formElement1.addEventListener("onclick", this.mail);
+    }
+
+    Writedata(name,email,phone,message) {
         var name = document.getElementById("name");
         var email = document.getElementById("email");
         var phone = document.getElementById("phone");
@@ -28,10 +34,10 @@ class app {
             message,
         });
 
-        docRef.push().set(messagetext);
+        docRef.push().set();
         window.alert("Inserted Successfully..");
     }
-    function mail(){
+    mail(){
         window.open('mailto:sirlindinh@googlemail.com?subject=subject&body=body');
     }
 }}
