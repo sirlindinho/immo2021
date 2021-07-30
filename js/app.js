@@ -22,7 +22,7 @@ class app {
         formElement1.addEventListener("onclick", this.mail);
     }
 
-    Writedata(name,email,phone,message) {
+    Writedata(event) {
         var name = document.getElementById("name");
         var email = document.getElementById("email");
         var phone = document.getElementById("phone");
@@ -40,5 +40,5 @@ class app {
     mail(){
         window.open('mailto:sirlindinh@googlemail.com?subject=subject&body=body');
     }
-}}
+}
 
